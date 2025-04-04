@@ -51,12 +51,12 @@ const CourseCard = () => {
             </Link>
             {/* Enroll Button */}
             <div className="mt-4">
-              <a
-                href="#"
+              <Link
+                href={"/checkout"}
                 className="w-full text-center inline-block px-6 py-2 text-indigo-600 bg-white border border-indigo-600 rounded-md hover:bg-indigo-600 hover:text-white transition-colors"
               >
                 Enroll Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>

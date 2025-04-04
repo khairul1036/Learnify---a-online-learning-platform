@@ -69,25 +69,25 @@ const CourseDetails = () => {
               <div className="flex space-x-4 border-b overflow-auto">
                 <button
                   onClick={() => setActiveTab('courseInfo')}
-                  className={`py-2 px-4 text-base font-semibold ${activeTab === 'courseInfo' ? 'border-b-2 border-indigo-600 text-indigo-600' : 'text-gray-600'}`}
+                  className={`py-2 px-4 text-base cursor-pointer font-semibold ${activeTab === 'courseInfo' ? 'border-b-2 border-indigo-600 text-indigo-600' : 'text-gray-600'}`}
                 >
                   Details
                 </button>
                 <button
                   onClick={() => setActiveTab('classSchedule')}
-                  className={`py-2 px-4 text-base font-semibold ${activeTab === 'classSchedule' ? 'border-b-2 border-indigo-600 text-indigo-600' : 'text-gray-600'}`}
+                  className={`py-2 px-4 text-base cursor-pointer font-semibold ${activeTab === 'classSchedule' ? 'border-b-2 border-indigo-600 text-indigo-600' : 'text-gray-600'}`}
                 >
                   Schedule
                 </button>
                 <button
                   onClick={() => setActiveTab('reviews')}
-                  className={`py-2 px-4 text-base font-semibold ${activeTab === 'reviews' ? 'border-b-2 border-indigo-600 text-indigo-600' : 'text-gray-600'}`}
+                  className={`py-2 px-4 text-base cursor-pointer font-semibold ${activeTab === 'reviews' ? 'border-b-2 border-indigo-600 text-indigo-600' : 'text-gray-600'}`}
                 >
                   Reviews
                 </button>
                 <button
                   onClick={() => setActiveTab('announcements')}
-                  className={`py-2 px-4 text-base font-semibold ${activeTab === 'announcements' ? 'border-b-2 border-indigo-600 text-indigo-600' : 'text-gray-600'}`}
+                  className={`py-2 px-4 text-base cursor-pointer font-semibold ${activeTab === 'announcements' ? 'border-b-2 border-indigo-600 text-indigo-600' : 'text-gray-600'}`}
                 >
                   Announcements
                 </button>
@@ -146,7 +146,7 @@ const CourseDetails = () => {
                  {/* Enroll Button */}
             <div className="mt-4">
               <Link
-                href="#"
+                href={"/checkout"}
                 className="w-full text-center inline-block px-6 py-2 text-white bg-indigo-600 border border-indigo-600 rounded-md hover:bg-indigo-700 hover:text-white transition-colors"
               >
                 Enroll Now
