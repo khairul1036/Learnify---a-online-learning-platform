@@ -11,9 +11,9 @@ const CourseCard = () => {
             className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
           />
           <div className="p-6">
-            <Link href={'/course-details/123'}>
+            <Link href={'/course-details/1234'}>
                 {/* Title and Rating */}
-                <h3 className="text-xl font-semibold text-indigo-600">Batch-2 | C Programming & Problem Solving</h3>
+                <h3 className="text-xl font-semibold">Batch-2 | C Programming & Problem Solving</h3>
                 
                 {/* Total Enrolled & Duration */}
                 <div className="flex justify-between items-center mt-2 text-gray-500 text-sm">
