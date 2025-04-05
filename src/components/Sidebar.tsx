@@ -10,19 +10,18 @@ const Sidebar = () => {
     <>
       {/* Sidebar for larger screens */}
       <div
-        className={`fixed inset-0 md:w-64 w-48 bg-indigo-700 text-white transition-transform duration-300 md:translate-x-0 z-50 ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-0 md:w-64 w-48 bg-indigo-700 text-white transition-transform duration-300 lg:translate-x-0 z-50 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="flex flex-col h-full p-4">
           {/* Logo */}
           <div className="text-2xl font-bold mb-6 border-b border-gray-400 pb-2">
             <div className="flex justify-between items-center">
               <Link href="/" className="text-4xl text-white">
-                Talkify
+                Learnify
               </Link>
               <button
-                className="block md:hidden"
+                className="block lg:hidden"
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
               >
                 <svg
@@ -46,7 +45,7 @@ const Sidebar = () => {
           {/* Sidebar Links */}
           <nav className="flex flex-col space-y-4">
             <Link
-              href="/"
+              href="/dashboard/overview"
               className="flex items-center text-white hover:bg-indigo-800 p-2 rounded transition-colors"
             >
               <svg
@@ -90,25 +89,27 @@ const Sidebar = () => {
       </div>
 
       {/* Mobile Sidebar Button (Hamburger) */}
-      <button
-        className="md:hidden top-6 left-1 z-40 fixed"
+      <div
+        className="w-full lg:hidden top-20 fixed"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="h-8 w-8"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
+        <div className="flex items-center justify-center py-2 text-white bg-indigo-600">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="h-8 w-8"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <span>Open Dashboard</span></div>
+      </div>
     </>
   );
 };

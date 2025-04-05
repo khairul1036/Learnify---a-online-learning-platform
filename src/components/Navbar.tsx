@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const user = false; // You can toggle this for testing purposes
+  const user = true; // You can toggle this for testing purposes
 
   const profileRef = useRef(null);
 

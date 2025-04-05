@@ -32,7 +32,7 @@ export default function RootLayout({
         {/* Navbar */}
         <Navbar />
         {/* Dynamic content from children */}
-        <main className="min-h-screen mt-20 mx-2">{children}</main>
+        <main className="min-h-screen mt-20">{children}</main>
         {/* Footer   */}
         <Footer/>
       </body>
