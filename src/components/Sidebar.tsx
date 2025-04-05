@@ -2,16 +2,25 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";  // Import usePathname hook
+import { ShoppingCart, Gauge, NotebookPen, User, Book, Star, MessageCircle, Settings, LogOut } from 'lucide-react'; // Importing Lucide icons
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Get the current pathname using usePathname hook
+  const pathname = usePathname();
+
+  // Helper function to determine if the current link is active
+  const isActiveLink = (href) => {
+    return pathname === href;
+  };
 
   return (
     <>
       {/* Sidebar for larger screens */}
       <div
-        className={`fixed inset-0 md:w-64 w-48 bg-indigo-700 text-white transition-transform duration-300 lg:translate-x-0 z-50 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+        className={`fixed inset-0 md:w-64 w-48 bg-indigo-700 text-white transition-transform duration-300 lg:translate-x-0 z-50 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="flex flex-col h-full p-4">
           {/* Logo */}
@@ -44,45 +53,87 @@ const Sidebar = () => {
 
           {/* Sidebar Links */}
           <nav className="flex flex-col space-y-4">
+            {/* Dashboard Link */}
             <Link
-              href="/dashboard/overview"
-              className="flex items-center text-white hover:bg-indigo-800 p-2 rounded transition-colors"
+              href="/dashboard"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard") ? "bg-white text-indigo-600" : "text-white"}`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-6 h-6 text-white"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M14.828 2.828a4 4 0 015.656 5.656l-10.6 10.6a2 2 0 01-.659.394L4 18.104a1 1 0 01-.463-.337l-1.388-1.388a1 1 0 01-.337-.463l2.329-4.184a2 2 0 01.394-.659l10.6-10.6a4 4 0 010 5.656z"
-                />
-              </svg>
-              <span className="ml-4">New Chat</span>
+              <Gauge className="w-6 h-6" />
+              <span className="ml-4">Dashboard</span>
             </Link>
+
+            {/* My Profile Link */}
             <Link
-              href={'/history'}
-              className="flex items-center text-white hover:bg-indigo-800 p-2 rounded transition-colors"
+              href="/dashboard/profile"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/profile") ? "bg-white text-indigo-600" : "text-white"}`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-6 h-6 text-white"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 6v6l4 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <span className="ml-4">History</span>
+              <User className="w-6 h-6" />
+              <span className="ml-4">My Profile</span>
+            </Link>
+
+            {/* Enrolled Courses Link */}
+            <Link
+              href="/dashboard/enrolled-courses"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/enrolled-courses") ? "bg-white text-indigo-600" : "text-white"}`}
+            >
+              <Book className="w-6 h-6" />
+              <span className="ml-4">Enrolled Courses</span>
+            </Link>
+
+            {/* Reviews Link */}
+            <Link
+              href="/dashboard/reviews"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/reviews") ? "bg-white text-indigo-600" : "text-white"}`}
+            >
+              <Star className="w-6 h-6" />
+              <span className="ml-4">Reviews</span>
+            </Link>
+
+            {/* My Quiz Attempts Link */}
+            <Link
+              href="#"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/quiz-attempts") ? "bg-white text-indigo-600" : "text-white"}`}
+            >
+              <NotebookPen className="w-6 h-6" />
+              <span className="ml-4">My Quiz Attempts</span>
+            </Link>
+
+            {/* Order History Link */}
+            <Link
+              href="/dashboard/purchase-history"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/purchase-history") ? "bg-white text-indigo-600" : "text-white"}`}
+            >
+              <ShoppingCart className="w-6 h-6" />
+              <span className="ml-4">Order History</span>
+            </Link>
+
+            {/* Question & Answer Link */}
+            <Link
+              href="#"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/qa") ? "bg-white text-indigo-600" : "text-white"}`}
+            >
+              <MessageCircle className="w-6 h-6" />
+              <span className="ml-4">Question & Answer</span>
+            </Link>
+
+            <div className="border-t"></div>
+
+            {/* Settings Link */}
+            <Link
+              href="/dashboard/settings"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/settings") ? "bg-white text-indigo-600" : "text-white"}`}
+            >
+              <Settings className="w-6 h-6" />
+              <span className="ml-4">Settings</span>
+            </Link>
+
+            {/* Logout Link */}
+            <Link
+              href="#"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/logout") ? "bg-white text-indigo-600" : "text-white"}`}
+            >
+              <LogOut className="w-6 h-6" />
+              <span className="ml-4">Logout</span>
             </Link>
           </nav>
         </div>
@@ -108,7 +159,8 @@ const Sidebar = () => {
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
-          <span>Open Dashboard</span></div>
+          <span>Open Dashboard</span>
+        </div>
       </div>
     </>
   );

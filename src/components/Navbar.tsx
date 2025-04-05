@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation"; // Importing the usePathname hook to track the active route
 
 const Navbar = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -10,6 +11,8 @@ const Navbar = () => {
   const user = true; // You can toggle this for testing purposes
 
   const profileRef = useRef(null);
+
+  const pathname = usePathname(); // Get the current pathname
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -27,6 +30,9 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  // Helper function to check if the current route matches the link
+  const isActiveLink = (href) => pathname === href;
 
   return (
     <nav className="bg-white shadow-lg p-4 fixed top-0 left-0 right-0 z-10">
@@ -56,14 +62,21 @@ const Navbar = () => {
         <div className="hidden md:block">
           <ul className="flex space-x-6">
             <li>
-              <Link href="/" className="text-gray-600 hover:text-indigo-600">
+              <Link
+                href="/"
+                className={`text-gray-600 hover:text-indigo-600 ${
+                  isActiveLink("/") ? "text-indigo-600 font-semibold" : ""
+                }`}
+              >
                 Home
               </Link>
             </li>
             <li>
               <Link
                 href="/courses"
-                className="text-gray-600 hover:text-indigo-600"
+                className={`text-gray-600 hover:text-indigo-600 ${
+                  isActiveLink("/courses") ? "text-indigo-600 font-semibold" : ""
+                }`}
               >
                 Courses
               </Link>
@@ -71,7 +84,9 @@ const Navbar = () => {
             <li>
               <Link
                 href="/about"
-                className="text-gray-600 hover:text-indigo-600"
+                className={`text-gray-600 hover:text-indigo-600 ${
+                  isActiveLink("/about") ? "text-indigo-600 font-semibold" : ""
+                }`}
               >
                 About
               </Link>
@@ -79,7 +94,9 @@ const Navbar = () => {
             <li>
               <Link
                 href="/contact"
-                className="text-gray-600 hover:text-indigo-600"
+                className={`text-gray-600 hover:text-indigo-600 ${
+                  isActiveLink("/contact") ? "text-indigo-600 font-semibold" : ""
+                }`}
               >
                 Contact
               </Link>
@@ -88,7 +105,9 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/dashboard"
-                  className="text-gray-600 hover:text-indigo-600"
+                  className={`text-gray-600 hover:text-indigo-600 ${
+                    isActiveLink("/dashboard") ? "text-indigo-600 font-semibold" : ""
+                  }`}
                 >
                   Dashboard
                 </Link>
@@ -141,28 +160,36 @@ const Navbar = () => {
         <div className="flex flex-col px-6 py-2">
           <Link
             href="/"
-            className="text-gray-600 hover:text-indigo-600 py-2"
+            className={`text-gray-600 hover:text-indigo-600 py-2 ${
+              isActiveLink("/") ? "text-indigo-600 font-semibold" : ""
+            }`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             href="/courses"
-            className="text-gray-600 hover:text-indigo-600 py-2"
+            className={`text-gray-600 hover:text-indigo-600 py-2 ${
+              isActiveLink("/courses") ? "text-indigo-600 font-semibold" : ""
+            }`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Courses
           </Link>
           <Link
             href="/about"
-            className="text-gray-600 hover:text-indigo-600 py-2"
+            className={`text-gray-600 hover:text-indigo-600 py-2 ${
+              isActiveLink("/about") ? "text-indigo-600 font-semibold" : ""
+            }`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className="text-gray-600 hover:text-indigo-600 py-2"
+            className={`text-gray-600 hover:text-indigo-600 py-2 ${
+              isActiveLink("/contact") ? "text-indigo-600 font-semibold" : ""
+            }`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
@@ -171,7 +198,9 @@ const Navbar = () => {
             <li>
               <Link
                 href="/dashboard"
-                className="text-gray-600 hover:text-indigo-600"
+                className={`text-gray-600 hover:text-indigo-600 ${
+                  isActiveLink("/dashboard") ? "text-indigo-600 font-semibold" : ""
+                }`}
               >
                 Dashboard
               </Link>
