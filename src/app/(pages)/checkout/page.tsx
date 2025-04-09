@@ -72,7 +72,7 @@ const Checkout = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Section: Customer Information */}
         <div className="space-y-6">
-          <h3 className="text-xl font-medium">Customer Information</h3>
+          <h3 className="text-xl font-medium">Student Information</h3>
           <form className="space-y-4">
             <div className="flex flex-col md:flex-row md:space-x-4">
               <div className="w-full md:w-1/2">

@@ -118,3 +118,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Hide the scrollbar, but allow scrolling */
+.sidebar-scrollable {
+  overflow-y: auto;
+}
+
+/* For WebKit browsers (Chrome, Safari, etc.) */
+.sidebar-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+.sidebar-scrollable {
+  scrollbar-width: none;  /* "auto" or "thin" to show, "none" to hide */
+}
