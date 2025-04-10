@@ -100,7 +100,7 @@ const AllCourse = () => {
                 </Link>
 
                 {/* Edit Icon */}
-                <Link href={"/"} className="relative group">
+                <Link href={"/dashboard/admin/edit-course/1"} className="relative group">
                   <Edit className="w-6 h-6 text-gray-600 cursor-pointer hover:text-indigo-600" />
                   {/* Tooltip for Edit */}
                   <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 text-xs text-white bg-gray-800 rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
