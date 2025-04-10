@@ -1,5 +1,5 @@
 // components/AllCourse.js
-import { Edit, SquarePlus  } from 'lucide-react';
+import { Edit, SquarePlus , ListPlus, Trash2} from 'lucide-react';
 import Link from 'next/link';
 
 const AllCourse = () => {
@@ -68,7 +68,7 @@ const AllCourse = () => {
               <td className="px-4 py-2">
                 <img src={course.bannerUrl} alt={course.name} className="w-20 h-16 object-cover rounded" />
               </td>
-              <td className="px-4 py-2">{course.name}</td>
+              <td className="px-4 py-2 hover:text-indigo-600"><Link href={"/course-details/1234"}>{course.name}</Link></td>
               <td className="px-4 py-2">{course.category}</td>
               <td className="px-4 py-2 flex items-center space-x-2">
                 <img src={course.instructor.image} alt={course.instructor.name} className="w-8 h-8 object-cover rounded-full" />
@@ -89,12 +89,33 @@ const AllCourse = () => {
                   <option value="Pending">Pending</option>
                 </select>
               </td>
-              <td className="px-4 py-2 flex justify-between items-center space-x-2">
-              <Link href={"/"} className=" w-full cursor-pointer inline-block px-4 py-1 text-sm font-medium text-indigo-600 bg-white border border-indigo-600 rounded-md hover:bg-indigo-600 hover:text-white transition-colors text-center"><button className='cursor-pointer'>View</button></Link>
-          {/* Edit Icon */}
-          <Link href={"/"}>
-          <Edit className="w-6 h-6 text-gray-600 cursor-pointer hover:text-indigo-600" />
-          </Link>
+              <td className="px-4 py-2 flex justify-between items-center space-x-2 relative">
+                {/* Add Topic Icon */}
+                <Link href={"/dashboard/add-modules/1"} className="relative group">
+                  <ListPlus className="w-8 h-8 text-gray-600 cursor-pointer hover:text-indigo-600" />
+                  {/* Tooltip for Add Topic */}
+                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 text-xs text-white bg-gray-800 rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Modules
+                  </span>
+                </Link>
+
+                {/* Edit Icon */}
+                <Link href={"/"} className="relative group">
+                  <Edit className="w-6 h-6 text-gray-600 cursor-pointer hover:text-indigo-600" />
+                  {/* Tooltip for Edit */}
+                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 text-xs text-white bg-gray-800 rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Edit
+                  </span>
+                </Link>
+
+                {/* Delete Icon */}
+                <Link href={"/"} className="relative group">
+                  <Trash2 className="w-6 h-6 text-gray-600 cursor-pointer hover:text-red-600" />
+                  {/* Tooltip for Delete */}
+                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 text-xs text-white bg-red-600 rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Delete
+                  </span>
+                </Link>
               </td>
             </tr>
           ))}
