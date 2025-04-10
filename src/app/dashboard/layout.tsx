@@ -1,5 +1,6 @@
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/dashboard/Footer";
 
 export default function DashboardLayout({ children }) {
   return (
@@ -16,9 +17,10 @@ export default function DashboardLayout({ children }) {
         </nav>
 
         {/* Main Content */}
-        <main className="mt-30 p-6 w-full flex-1">
+        <main className="mt-30 lg:mt-20 p-5 w-full flex-1">
           {children}
         </main>
+        <Footer/>
       </div>
     </div>
   );

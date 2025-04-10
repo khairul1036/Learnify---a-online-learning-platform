@@ -125,6 +125,7 @@ const Sidebar = () => {
             <div className="border-t"></div>
 
             {/* Instructor routes links start */}
+            <h4 className="text-sm text-gray-300">Instructor</h4>
 
             {/* my-courses link  */}
             <Link
@@ -159,14 +160,15 @@ const Sidebar = () => {
             <div className="border-t"></div>
 
             {/* admin routes links start */}
+            <h4 className="text-sm text-gray-300">Admin</h4>
 
             {/* Create Course route link */}
             <Link
-              href="/dashboard/admin/create-course"
-              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/admin/create-course") ? "bg-white text-indigo-600" : "text-white"}`}
+              href="/dashboard/admin/all-course"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/admin/all-course") ? "bg-white text-indigo-600" : "text-white"}`}
             >
               <Settings className="w-6 h-6" />
-              <span className="ml-4">Create Course</span>
+              <span className="ml-4">All Courses</span>
             </Link>
 
             {/* Create Category route link */}
@@ -194,6 +196,15 @@ const Sidebar = () => {
             >
               <Settings className="w-6 h-6" />
               <span className="ml-4">Order</span>
+            </Link>
+
+            {/* promo code routes */}
+            <Link
+              href="/dashboard/admin/promo"
+              className={`flex items-center hover:text-indigo-700 hover:bg-white p-2 rounded transition-colors ${isActiveLink("/dashboard/admin/promo") ? "bg-white text-indigo-600" : "text-white"}`}
+            >
+              <Settings className="w-6 h-6" />
+              <span className="ml-4">Promo</span>
             </Link>
 
             {/* admin routes links end */}
