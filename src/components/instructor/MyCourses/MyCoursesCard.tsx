@@ -71,7 +71,7 @@ const MyCoursesCard = ({ title, students, hours, price, bannerUrl, createDate })
         <div className="flex justify-between items-center mt-4 gap-5">
             <Link href={"/"} className="w-full cursor-pointer inline-block px-6 py-2 text-sm font-medium text-indigo-600 bg-white border border-indigo-600 rounded-md hover:bg-indigo-600 hover:text-white transition-colors text-center"><button >Go Course</button></Link>
           {/* Edit Icon */}
-          <Link href={"/"}>
+          <Link href={"/dashboard/add-modules/1"}>
           <Edit className="w-8 h-8 text-gray-600 cursor-pointer hover:text-indigo-600" />
           </Link>
 

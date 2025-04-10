@@ -109,7 +109,7 @@ const AllCourse = () => {
                 </Link>
 
                 {/* Delete Icon */}
-                <Link href={"/"} className="relative group">
+                <Link href={"#"} className="relative group">
                   <Trash2 className="w-6 h-6 text-gray-600 cursor-pointer hover:text-red-600" />
                   {/* Tooltip for Delete */}
                   <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 text-xs text-white bg-red-600 rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
