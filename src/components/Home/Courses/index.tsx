@@ -61,13 +61,12 @@ const Courses = () => {
     return (
         <section id="courses">
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pb-20'>
-                <div className="sm:flex justify-between items-center mb-20">
-                    <h2 className="text-4xl lg:text-5xl font-bold mb-5 sm:mb-0">Popular courses.</h2>
-                    <Link href={'/'} className="text-lg font-bold hover:tracking-widest duration-500">Explore courses&nbsp;&gt;&nbsp;</Link>
+                <div className="items-center mb-20">
+                    <h2 className="text-center text-4xl lg:text-5xl font-bold mb-5 sm:mb-0">Popular courses</h2>
                 </div>
                 <Slider {...settings}>
                     {courseData.map((items) => (
-                        <div key={items.id } >
+                        <div key={items.id} >
                             <div className='bg-white m-3 mb-12 px-3 pt-3 pb-12 shadow-xl rounded-2xl h-full'>
                                 <div className="relative rounded-3xl">
                                     <Image src={`${getImagePrefix()}${items.imgSrc}`} alt="course-image" width={389} height={262} className="m-auto clipPath" />
@@ -109,6 +108,11 @@ const Courses = () => {
                         </div>
                     ))}
                 </Slider>
+                <div className="flex justify-center">
+                    <button type="button" className="bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-bold rounded-full px-10 py-5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2 cursor-pointer shadow-2xl">
+                        Connect with MetaMask
+                    </button>
+                </div>
             </div>
         </section>
     );

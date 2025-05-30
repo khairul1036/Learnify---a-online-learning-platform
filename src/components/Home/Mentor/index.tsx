@@ -42,7 +42,7 @@ const Mentor = () => {
     return (
         <section className="bg-[#00015D]/30 py-20" id="mentor" >
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 relative'>
-                <h2 className=" text-5xl font-bold">Meet with our <br /> mentor.</h2>
+                <h2 className="text-center text-5xl font-bold">Meet with our mentor</h2>
 
                 <Slider {...settings}>
                     {MentorData.map((items, i) => (

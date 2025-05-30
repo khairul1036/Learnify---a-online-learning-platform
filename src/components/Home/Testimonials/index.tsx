@@ -67,6 +67,7 @@ const Testimonial = () => {
     return (
         <section id="testimonial">
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 py-20'>
+                <h2 className="text-center text-5xl font-bold pb-10">Meet with our mentor</h2>
                 <Slider {...settings}>
                     {TestimonialData.map((items, i) => (
                         <div key={i}>
