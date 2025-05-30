@@ -109,8 +109,8 @@ const Courses = () => {
                     ))}
                 </Slider>
                 <div className="flex justify-center">
-                    <button type="button" className="bg-[#00015D] hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-bold rounded-full px-10 py-5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 text-white hover:text-black dark:text-white dark:hover:bg-gray-700 me-2 mb-2 cursor-pointer shadow-2xl">
-                        Connect with MetaMask
+                    <button type="button" className="bg-[#00015D] hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-bold rounded-full px-15 py-7 text-xl text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 text-white hover:text-black dark:text-white dark:hover:bg-gray-700 me-2 mb-2 cursor-pointer shadow-2xl">
+                        Explore courses
                     </button>
                 </div>
             </div>
