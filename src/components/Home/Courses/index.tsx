@@ -60,7 +60,7 @@ const Courses = () => {
 
     return (
         <section id="courses">
-            <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4'>
+            <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pb-20'>
                 <div className="sm:flex justify-between items-center mb-20">
                     <h2 className="text-midnight_text text-4xl lg:text-5xl font-bold mb-5 sm:mb-0">Popular courses.</h2>
                     <Link href={'/'} className="text-lg font-bold hover:tracking-widest duration-500">Explore courses&nbsp;&gt;&nbsp;</Link>
