@@ -67,7 +67,7 @@ const Courses = () => {
                 <Slider {...settings}>
                     {courseData.map((items) => (
                         <div key={items.id} >
-                            <div className='bg-white m-3 mb-12 px-3 pt-3 pb-12 shadow-xl rounded-2xl h-full'>
+                            <div className='bg-white m-3 mb-12 px-3 pt-3 pb-12 shadow-xl rounded-2xl h-full border border-white'>
                                 <div className="relative rounded-3xl">
                                     <Image src={`${getImagePrefix()}${items.imgSrc}`} alt="course-image" width={389} height={262} className="m-auto clipPath" />
                                     <div className="absolute right-5 -bottom-2 bg-[#00015D] rounded-full p-6">
@@ -109,7 +109,7 @@ const Courses = () => {
                     ))}
                 </Slider>
                 <div className="flex justify-center">
-                    <button type="button" className="bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-bold rounded-full px-10 py-5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2 cursor-pointer shadow-2xl">
+                    <button type="button" className="bg-[#00015D] hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-bold rounded-full px-10 py-5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 text-white hover:text-black dark:text-white dark:hover:bg-gray-700 me-2 mb-2 cursor-pointer shadow-2xl">
                         Connect with MetaMask
                     </button>
                 </div>

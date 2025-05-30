@@ -55,8 +55,8 @@ const Mentor = () => {
                                     </div>
                                 </div>
                                 <div className="-mt-10">
-                                    <h3 className='text-2xl font-bold text-lightblack'>{items.name}</h3>
-                                    <h4 className='text-lg font-normal text-lightblack pt-2 opacity-50'>{items.profession}</h4>
+                                    <h3 className='text-2xl font-bold'>{items.name}</h3>
+                                    <h4 className='text-lg font-normal pt-2 opacity-50'>{items.profession}</h4>
                                 </div>
                             </div>
                         </div>

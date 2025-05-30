@@ -54,7 +54,7 @@ const Companies = () => {
     return (
         <section className='text-center my-40' >
             <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
-                <h2 className="text-4xl lg:text-5xl font-bold mb-5 sm:mb-5">Trusted by companies of all sizes</h2>
+                <h2 className="text-4xl lg:text-5xl font-bold mb-10 sm:mb-10">Trusted by companies of all sizes</h2>
                 <div className="py-14 border-b ">
                     <Slider {...settings}>
                         {TruestedCompanies.map((item, i) =>
