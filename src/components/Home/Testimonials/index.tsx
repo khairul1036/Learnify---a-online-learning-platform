@@ -66,11 +66,11 @@ const Testimonial = () => {
 
     return (
         <section id="testimonial">
-            <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4'>
+            <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 py-20'>
                 <Slider {...settings}>
                     {TestimonialData.map((items, i) => (
                         <div key={i}>
-                            <div className={`bg-white rounded-2xl m-4 p-5 my-20 relative ${i % 2 ? 'shadow-testimonial-shadow2' : 'shadow-testimonial-shadow1'}`}>
+                            <div className={`bg-white rounded-2xl m-4 p-5 my-20 relative ${i % 2 ? 'shadow-xl' : 'shadow-xl'}`}>
                                 <div className="absolute top-[-45px]">
                                     <Image src={`${getImagePrefix()}${items.imgSrc}`}
                                         alt={items.name} width={100} height={100} className="inline-block" />
