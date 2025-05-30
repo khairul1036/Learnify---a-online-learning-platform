@@ -26,6 +26,7 @@ export const TruestedCompanies: { imgSrc: string }[] = [
 ]
 
 export const courseData: {
+  id: number;
   heading: string;
   imgSrc: string;
   name: string;
@@ -35,6 +36,7 @@ export const courseData: {
   rating: number;
 }[] = [
     {
+      id: 1,
       heading: 'Full stack modern javascript',
       name: "Colt stelle",
       imgSrc: '/images/courses/courseone.png',
@@ -44,6 +46,7 @@ export const courseData: {
       rating: 4.4,
     },
     {
+      id: 2,
       heading: 'Design system with React programme',
       name: "Colt stelle",
       imgSrc: '/images/courses/coursetwo.png',
@@ -53,6 +56,7 @@ export const courseData: {
       rating: 4.5,
     },
     {
+      id: 3,
       heading: 'Design banner with Figma',
       name: "Colt stelle",
       imgSrc: '/images/courses/coursethree.png',
@@ -62,6 +66,7 @@ export const courseData: {
       rating: 5,
     },
     {
+      id: 4,
       heading: 'We Launch Delia Webflow this Week!',
       name: "Colt stelle",
       imgSrc: '/images/courses/courseone.png',
@@ -71,6 +76,7 @@ export const courseData: {
       rating: 5,
     },
     {
+      id: 5,
       heading: 'We Launch Delia Webflow this Week!',
       name: "Colt stelle",
       imgSrc: '/images/courses/coursetwo.png',
@@ -80,6 +86,7 @@ export const courseData: {
       rating: 5,
     },
     {
+      id: 6,
       heading: 'We Launch Delia Webflow this Week!',
       name: "Colt stelle",
       imgSrc: '/images/courses/coursethree.png',

@@ -9,6 +9,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { courseData } from "@/app/api/data";
 import { getImagePrefix } from "@/utils/util";
 
+
 const Courses = () => {
 
     const settings = {
@@ -64,8 +65,8 @@ const Courses = () => {
                     <Link href={'/'} className="text-primary text-lg font-medium hover:tracking-widest duration-500">Explore courses&nbsp;&gt;&nbsp;</Link>
                 </div>
                 <Slider {...settings}>
-                    {courseData.map((items, i) => (
-                        <div key={i}>
+                    {courseData.map((items) => (
+                        <div key={items.id } >
                             <div className='bg-white m-3 mb-12 px-3 pt-3 pb-12 shadow-course-shadow rounded-2xl h-full'>
                                 <div className="relative rounded-3xl">
                                     <Image src={`${getImagePrefix()}${items.imgSrc}`} alt="course-image" width={389} height={262} className="m-auto clipPath" />
