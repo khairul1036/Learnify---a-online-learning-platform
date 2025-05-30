@@ -9,7 +9,7 @@ const Newsletter = () => {
                 <div className="grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-12 xl:gap-x-8 mb-20">
                     <div className="col-span-12 bg-contain bg-no-repeat  bg-[#FF7F3E] rounded-4xl">
                         <div className="mb-10 mt-24 lg:mx-64 lg:my-24">
-                            <h3 className="text-4xl md:text-5xl text-center font-bold text-white mb-3">Newsletter.</h3>
+                            <h3 className="text-4xl md:text-5xl text-center font-bold text-white mb-3">Newsletter</h3>
                             <h3 className="text-base text-white text-center mb-8">
                                 Subscrible our newsletter for discounts, <br /> promo and many more.
                             </h3>
