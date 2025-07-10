@@ -1,10 +1,21 @@
 import React from 'react';
+import Companies from '@/components/Home/Companies';
+import Courses from '@/components/Home/Courses';
+import Hero from '@/components/Home/Hero';
+import Mentor from '@/components/Home/Mentor';
+import Newsletter from '@/components/Home/Newsletter';
+import Testimonial from '@/components/Home/Testimonials';
 
 const Home = () => {
     return (
-        <div>
-            Home Home Home
-        </div>
+        <>
+            <Hero />
+            <Companies />
+            <Courses />
+            <Mentor />
+            <Testimonial />
+            <Newsletter />
+        </>
     );
 };
 
